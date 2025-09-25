@@ -238,8 +238,33 @@
                 font-size: 2rem;
             }
 
+            .navigation {
+                top: 0;
+                padding: 12px 16px;
+                margin-bottom: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                gap: 12px;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 4px;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-link {
+                flex: 0 0 auto;
+                white-space: nowrap;
+            }
+
             .feature-section {
                 padding: 20px;
+                scroll-margin-top: 110px;
             }
 
             .feature-header {
@@ -250,11 +275,6 @@
             .feature-icon {
                 margin-right: 0;
                 margin-bottom: 10px;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
             }
 
             .step {
