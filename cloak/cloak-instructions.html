@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloak - How to Use Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-link {
+            padding: 8px 16px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .feature-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .feature-description {
+            font-size: 1.05rem;
+            color: #54606b;
+            margin-bottom: 20px;
+            padding: 18px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .steps-container {
+            margin-top: 10px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            padding: 15px;
+            background: #fbfcfd;
+            border-radius: 12px;
+            border: 1px solid #e8ecef;
+        }
+
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .step-text {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            border: 1px solid #27ae60;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 18px;
+        }
+
+        .tip-box .tip-icon {
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #fef8e1 100%);
+            border: 1px solid #f39c12;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 18px;
+        }
+
+        .warning-box .warning-icon {
+            color: #f39c12;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .feature-highlight h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-left: 8px;
+        }
+
+        .badge-pro {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .feature-section {
+                padding: 20px;
+            }
+
+            .feature-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 10px;
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🛡️ Cloak App Guide</h1>
+            <p>Everything you need to set up Cloak, hide apps, and keep your private content safe in just a few minutes.</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="nav-links">
+                <a href="#getting-started" class="nav-link">🚀 Getting Started</a>
+                <a href="#manage-apps" class="nav-link">📱 Hide Apps</a>
+                <a href="#safe-zones" class="nav-link">📍 Safe Zones</a>
+                <a href="#decoy-mode" class="nav-link">🎭 Decoy Mode</a>
+                <a href="#security" class="nav-link">🔐 Security & Settings</a>
+                <a href="#pro" class="nav-link">💎 Pro & Limits</a>
+                <a href="#troubleshooting" class="nav-link">🛠️ Troubleshooting</a>
+            </div>
+        </nav>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">Getting Started</div>
+            </div>
+
+            <div class="feature-description">
+                Cloak uses Apple’s Screen Time controls to hide apps everywhere (Home Screen, App Library, Spotlight, and search). The first launch walks you through the one-time permission Cloak needs to work.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Open Cloak and tap “Get Started”</div>
+                        <div class="step-text">Swipe through the welcome screens until you see the Screen Time prompt page.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Connect to Screen Time</div>
+                        <div class="step-text">When you see “Cloak Would Like to Access Screen Time,” tap <strong>Continue</strong>, choose <strong>This is my iPhone</strong> (if asked), and press <strong>Allow</strong>. Enter your Screen Time passcode if you have one.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Wait for the connection</div>
+                        <div class="step-text">Cloak shows “Connecting to Screen Time” for a few seconds. When it finishes you’ll land on the <strong>Apps</strong> tab with the “Hide Mode Ready” status.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Optional: Allow location later</div>
+                        <div class="step-text">The first time you open the <strong>Safe Zones</strong> tab, iOS will ask for location access. Tap <strong>Allow While Using App</strong> so Cloak can automate hiding when you leave a zone.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-icon">💡</span>
+                <strong>Tip:</strong> If you accidentally chose “Don’t Allow,” reopen Cloak and we’ll prompt you again. Still not working? Open <strong>Settings → Screen Time</strong>, make sure Screen Time is turned on, then reopen Cloak to reconnect.
+            </div>
+        </section>
+
+        <!-- Manage Apps Section -->
+        <section id="manage-apps" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Hide Apps from the Apps Tab</div>
+            </div>
+
+            <div class="feature-description">
+                The middle tab (<strong>Apps</strong>) is your control center. Create folders, choose the apps inside, and flip the neon switch to hide or unhide everything in that folder.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Tap “Hide Apps” (top right) or “Choose Apps”</div>
+                        <div class="step-text">Apple’s picker opens. Use search or expand categories to find the apps you want to hide.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Select your apps and tap “Done”</div>
+                        <div class="step-text">Cloak creates an <strong>App Folder</strong> card. Free plan: 1 app per folder. Cloak Pro: pick as many as you like.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Use the toggle to hide or show the folder</div>
+                        <div class="step-text">Flip the switch to <strong>ON</strong> to hide the apps, <strong>OFF</strong> to unhide. iOS may take 30–90 seconds to finish the change everywhere.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Edit or remove a folder</div>
+                        <div class="step-text">Tap the app count area to reopen the picker, the trash icon to delete, or the pencil to rename <span class="badge badge-pro">PRO</span>.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Need a clean slate?</div>
+                        <div class="step-text">Open the <strong>Settings</strong> tab and tap <strong>Restore All Apps</strong> to unhide everything instantly.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-icon">💡</span>
+                <strong>Tip:</strong> Leaving Cloak open in the background helps Screen Time apply the hide/unhide request faster.
+            </div>
+        </section>
+
+        <!-- Safe Zones Section -->
+        <section id="safe-zones" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">📍</div>
+                <div class="feature-title">Safe Zones (Location Automation)</div>
+            </div>
+
+            <div class="feature-description">
+                Safe Zones automatically unhide selected folders while you are inside a location and hide them again shortly after you leave. Perfect for letting trusted places keep your apps visible.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Open the Safe Zones tab</div>
+                        <div class="step-text">It’s the left-most shield icon. Tap <strong>+ Add Zone</strong>.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Place your zone on the map</div>
+                        <div class="step-text">Tap the map to drop the circle where you need it, then adjust the diameter (200 m, 400 m, or 800 m). Give the zone a name and tap <strong>Done</strong>.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Link folders to the zone</div>
+                        <div class="step-text">On the zone card, tap <strong>Select app folders</strong> and choose the folders you want to react to this zone.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Let Cloak take it from there</div>
+                        <div class="step-text">While you are inside the zone, the linked folders stay visible. Leaving the area rehides them automatically within about 1–2 minutes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <span class="warning-icon">⚠️</span>
+                <strong>Important:</strong> Keep Location Services turned on and make sure Cloak has location access. Free plan includes 1 safe zone; Cloak Pro unlocks unlimited zones.
+            </div>
+        </section>
+
+        <!-- Decoy Mode Section -->
+        <section id="decoy-mode" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">🎭</div>
+                <div class="feature-title">Decoy Mode<span class="badge badge-pro">PRO</span></div>
+            </div>
+
+            <div class="feature-description">
+                Decoy Mode gives curious eyes a harmless version of Cloak. A real passcode unlocks your private folders, while a different passcode shows only the safe decoy setup you choose.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Set a real passcode first</div>
+                        <div class="step-text">Go to <strong>Settings → Passcode</strong> and create a 4–8 digit code. This is required before Decoy Mode can be enabled.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Enable Decoy Mode</div>
+                        <div class="step-text">Open the <strong>Decoy</strong> tab and toggle <strong>Decoy Mode</strong> on. Choose a decoy passcode that is different from your real one.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Build your decoy setup</div>
+                        <div class="step-text">While the switch is on, you are inside Decoy Mode. Use the <strong>Hide Apps</strong> button to pick the harmless apps and folders you want others to see.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Unlock with the right passcode</div>
+                        <div class="step-text">Opening Cloak with the <strong>real passcode</strong> shows your private folders. Entering the <strong>decoy passcode</strong> goes straight to the decoy view, skipping Face ID.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Turn it off any time</div>
+                        <div class="step-text">Return to the <strong>Decoy</strong> tab and toggle the switch off to remove the decoy passcode and folders.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-icon">💡</span>
+                <strong>Tip:</strong> You can still use Safe Zones inside Decoy Mode. Create separate decoy folders if you want the fake setup to behave differently.
+            </div>
+        </section>
+
+        <!-- Security & Settings Section -->
+        <section id="security" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">🔐</div>
+                <div class="feature-title">Security & Settings</div>
+            </div>
+
+            <div class="feature-description">
+                The gear tab keeps every control in one place. Use it to lock Cloak, customize the app, or reset everything in seconds.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Lock Cloak with a passcode<span class="badge badge-pro">PRO</span></div>
+                        <div class="step-text">Toggle <strong>Passcode</strong> on, choose a 4–8 digit code, and confirm it. This passcode protects the app when you launch Cloak.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Add Face ID / Touch ID<span class="badge badge-pro">PRO</span></div>
+                        <div class="step-text">After setting a passcode, turn on <strong>Face ID</strong> in Settings. Cloak will ask for your face after the correct passcode is entered.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Change the Cloak icon<span class="badge badge-pro">PRO</span></div>
+                        <div class="step-text">Tap <strong>Change Icon</strong> to choose a discreet app icon that blends into your Home Screen.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Folder preview options<span class="badge badge-pro">PRO</span></div>
+                        <div class="step-text">Toggle <strong>Show Icons in Folders</strong> to display the real app icons inside each folder card.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Restore All Apps</div>
+                        <div class="step-text">This button unblocks every folder instantly in whichever mode you are in. Use it before uninstalling or if you just want to start fresh.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <span class="warning-icon">⚠️</span>
+                <strong>Security note:</strong> Passcodes are stored only on your device. If you forget them, we can’t recover them—contact support before deleting the app.
+            </div>
+        </section>
+
+        <!-- Pro & Limits Section -->
+        <section id="pro" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">💎</div>
+                <div class="feature-title">Cloak Pro & Free Plan Limits</div>
+            </div>
+
+            <div class="feature-description">
+                Cloak works out of the box, and Cloak Pro unlocks everything with one subscription.
+            </div>
+
+            <div class="feature-highlight">
+                <h4>What’s included with Cloak Pro</h4>
+                <ul>
+                    <li>Unlimited folders and unlimited apps per folder</li>
+                    <li>Unlimited Safe Zones</li>
+                    <li>Passcode lock, Face ID / Touch ID, and Decoy Mode</li>
+                    <li>Custom app icons and folder icon previews</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-icon">💡</span>
+                <strong>Free plan limits:</strong> 1 hidden folder, 1 app per folder, 1 safe zone, and no authentication or custom icons. Upgrade from the <strong>Settings → Pro</strong> card whenever you need more.
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section id="troubleshooting" class="feature-section">
+            <div class="feature-header">
+                <div class="feature-icon">🛠️</div>
+                <div class="feature-title">Troubleshooting & Support</div>
+            </div>
+
+            <div class="feature-description">
+                Quick fixes for the most common questions. If you are still stuck, reach out and we’ll help right away.
+            </div>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Apps are still showing</div>
+                        <div class="step-text">Leave Cloak open for a minute, make sure the folder toggle is on, and confirm Screen Time access is still granted. Use <strong>Restore All Apps</strong> then hide again if things get out of sync.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">“Not Authorized” message</div>
+                        <div class="step-text">Open <strong>Settings → Screen Time</strong>, ensure Screen Time is enabled, then reopen Cloak. We’ll ask to reconnect if needed.</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Safe Zone not switching</div>
+                        <div class="step-text">Check that Cloak has location access, keep the app running in the background, and stay inside the circle long enough for iOS to update (usually under 2 minutes).</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Need help with passcodes</div>
+                        <div class="step-text">Passcodes live only on your device. If you get locked out, email us so we can walk you through safe next steps before you uninstall.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <span class="tip-icon">📬</span>
+                <strong>We’re here to help:</strong> <a href="mailto:support@softskytech.com" style="color: #1f78d1; text-decoration: none;">support@softskytech.com</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 30px; color: #7f8c8d; border-top: 1px solid #ecf0f1; margin-top: 40px;">
+            <p>Need more help? Contact us at <a href="mailto:support@softskytech.com" style="color: #3498db;">support@softskytech.com</a></p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">© 2024 SoftSky Technologies - Your Privacy, Protected</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.feature-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '#ecf0f1';
+                link.style.color = '#2c3e50';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.background = '#3498db';
+                    link.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

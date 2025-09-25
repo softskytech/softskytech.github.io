@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for Cloak</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 48px 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e6e9ef;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            font-size: 15px;
+            color: #475569;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 36px 0 18px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 28px 0 16px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: #334155;
+            font-size: 16px;
+        }
+
+        ul {
+            margin: 18px 0 24px 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #334155;
+        }
+
+        a {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .notice {
+            background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(236,254,255,0.7));
+            border: 1px solid rgba(14,165,233,0.35);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 24px 0 12px;
+            color: #0f172a;
+        }
+
+        .footer {
+            margin-top: 48px;
+            font-size: 15px;
+            color: #475569;
+            border-top: 1px solid #e6e9ef;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .container {
+                padding: 32px 22px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="subtitle">Privacy Policy for Cloak</div>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Effective date: July 15, 2025</p>
+        </header>
+
+        <p>SoftSky Technologies ("SoftSky", "we", "us", or "our") built Cloak to help you discreetly hide and manage iOS apps using Apple’s Screen Time framework. This Privacy Policy describes how Cloak handles data when you use the app.</p>
+
+        <h2>Information We Access</h2>
+        <p>Cloak does not create user accounts or collect personal identifiers. The app only accesses the data it needs to provide hiding and automation features:</p>
+        <ul>
+            <li><strong>Screen Time app selections:</strong> the list of apps you choose to hide or unhide lives entirely on your device and is managed through Apple’s FamilyControls API.</li>
+            <li><strong>Safe Zone locations:</strong> when you create a Safe Zone, Cloak stores the coordinates locally to trigger hide/unhide automation.</li>
+            <li><strong>Passcodes and biometric status:</strong> the real and decoy passcodes you configure are saved in the iOS Keychain. Cloak only knows if Face ID/Touch ID is enabled—your biometric data never leaves the system secure enclave.</li>
+            <li><strong>Subscription status:</strong> anonymous purchase receipts and entitlement data are processed so we can unlock Cloak Pro features.</li>
+        </ul>
+
+        <h2>How We Use This Information</h2>
+        <p>Information accessed by Cloak stays on-device and is used solely to power app hiding, Safe Zones, Decoy Mode, and authentication. We do not sell or rent any information, and we do not build advertising profiles.</p>
+
+        <h2>Screen Time Permission</h2>
+        <p>Cloak needs Screen Time authorization to hide or reveal apps. The first launch prompts you to grant this permission through Apple’s dialog. Cloak cannot see your Screen Time reports; it only receives authorization tokens that allow it to request changes for the apps you select.</p>
+
+        <h2>Location Data & Safe Zones</h2>
+        <p>Safe Zones are optional. When enabled, Cloak reads your current location in the background solely to check whether you are inside any active zone and to toggle the linked app folders. Location details are stored locally on the device, and the feature can be disabled or removed at any time. You can revoke Cloak’s access in <strong>Settings &gt; Privacy &amp; Security &gt; Location Services</strong>.</p>
+
+        <h2>Passcodes, Face ID, and Decoy Mode</h2>
+        <p>Both the real and decoy passcodes are encrypted and saved in the iOS Keychain. Cloak never transmits or exports these passcodes. Face ID / Touch ID status is stored locally; biometrics themselves remain entirely under Apple’s control. If you forget a passcode, we cannot recover it for you.</p>
+
+        <h2>In-App Purchases & Subscriptions</h2>
+        <p>Cloak offers optional subscriptions. Apple processes every purchase; we receive anonymized receipts so we can confirm your entitlement. We may share minimal consumption data with Apple when you request a refund, consistent with App Store policy.</p>
+
+        <h2>Third-Party Service Providers</h2>
+        <p>To keep subscriptions secure, Cloak relies on trusted infrastructure partners:</p>
+        <ul>
+            <li><strong>RevenueCat</strong> (subscription management and analytics). Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a></li>
+            <li><strong>Firebase App Check & Cloud Functions</strong> provided by Google (automated protection keys and secure API proxy; no personal content is transmitted). Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+            <li><strong>Apple</strong> (App Store purchases, Screen Time and FamilyControls frameworks). Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a></li>
+        </ul>
+        <p>Each provider receives only the minimal data necessary to perform its function, and all transfers use encrypted connections.</p>
+
+        <h2>Data Retention & Deletion</h2>
+        <p>Because Cloak operates entirely on-device, removing the app or deleting your Safe Zones immediately deletes the associated data. Subscription receipts are retained for as long as required to comply with marketplace, tax, and refund obligations. You may request deletion of purchase records by contacting us using the email below.</p>
+
+        <h2>Security Measures</h2>
+        <p>We follow platform security best practices, including Apple’s Screen Time entitlements, Keychain storage for secrets, App Attest/App Check to defend against tampering, and TLS encryption for all network traffic.</p>
+
+        <h2>Children’s Privacy</h2>
+        <p>Cloak is designed for adults who control their own Screen Time settings. We do not knowingly collect information from children under 13. If you believe a child has used Cloak without permission, please contact us so we can assist.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy to reflect new features or legal requirements. If we make material changes, we will notify you within the app or via our website before the new policy takes effect.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or wish to exercise privacy rights, email us at <a href="mailto:support@softskytech.com">support@softskytech.com</a>.</p>
+
+        <div class="footer">
+            SoftSky Technologies<br>
+            Email: <a href="mailto:support@softskytech.com">support@softskytech.com</a>
+        </div>
+    </div>
+</body>
+</html>
