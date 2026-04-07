@@ -135,84 +135,131 @@
         <header>
             <div class="subtitle">Privacy Policy for Enigma</div>
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: March 13, 2026</p>
+            <p class="last-updated">Last updated: April 7, 2026</p>
         </header>
 
-        <p>SoftSky Technologies ("SoftSky", "we", "us", or "our") operates Enigma, a writing assistant app with Humanize, AI Detection, and Plagiarism Checking features.</p>
-        <p>This Privacy Policy explains what data we process, why we process it, how it is protected, and what choices you have.</p>
+        <p>SoftSky Technologies ("SoftSky", "we", "us", or "our") operates Enigma, a mobile writing and text analysis app with AI Detection, Plagiarism Checker, Fact Checker, Text Compare, subscriptions, credits, and top-up purchases.</p>
+        <p>This Privacy Policy explains what information Enigma processes, why it is processed, which service providers help us operate the app, how information is protected, and how you can request deletion or contact us.</p>
 
         <div class="notice">
             <p><strong>At a glance</strong></p>
             <ul>
-                <li>Text you submit is processed to deliver your requested results.</li>
-                <li>Text is sent securely via API to humanizer, AI detection, and plagiarism vendors.</li>
-                <li>We do not use Google Ads remarketing, affiliate links, or cookies in the app.</li>
+                <li>Text you submit is processed only when you choose to run a feature.</li>
+                <li>Enigma sends submitted text through our backend for AI Detection, Plagiarism Checker, Fact Checker, and Text Compare results.</li>
+                <li>We use backend services for device sessions, credit balances, credit history, rate limiting, security checks, and account deletion.</li>
+                <li>We use purchase and subscription services to manage subscriptions, top-ups, entitlements, purchase status, and purchase webhooks. The app marketplace payment platform processes payments.</li>
+                <li>Saved documents and results are stored locally on your device unless you run a feature that sends the text for analysis.</li>
+                <li>We use device integrity and anti-abuse services to help verify legitimate app/device requests and reduce abuse.</li>
+                <li>We do not sell personal information.</li>
+                <li>We do not use ad remarketing, affiliate links, or in-app advertising cookies.</li>
                 <li>Contact: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></li>
             </ul>
         </div>
 
         <h2>1. Scope</h2>
-        <p>This Privacy Policy applies to Enigma and any related support communications with us. It applies only to information processed through Enigma and does not cover third-party services beyond our control.</p>
+        <p>This Privacy Policy applies to Enigma and related support communications with SoftSky. It does not apply to third-party websites, app marketplace services, purchase management services, backend infrastructure services, text analysis services, device integrity services, or any other third-party services except where we describe how Enigma uses them.</p>
 
         <h2>2. Information We Process</h2>
-        <ul>
-            <li><strong>Submitted text:</strong> text you manually type or paste into Enigma.</li>
-            <li><strong>Feature events:</strong> whether you triggered Humanize, AI Detection, or Plagiarism Checking.</li>
-            <li><strong>Support information:</strong> your email address and message contents when you contact support.</li>
-            <li><strong>Limited technical metadata:</strong> basic service metadata (for example request timing, response status, and app version) used for reliability and abuse prevention.</li>
-        </ul>
+        <h3>Submitted text and imported text</h3>
+        <p>When you type, paste, or import text into Enigma, the app processes that text to provide the feature you request. If you import a file, Enigma may extract text from that file for use in the app. When you run AI Detection, Plagiarism Checker, Fact Checker, or Text Compare, the submitted text is sent to our backend and then to a third-party text analysis provider to generate the requested result.</p>
+        <p>For Text Compare, both texts are sent for comparison. For Fact Checker, submitted text is sent so claims can be analyzed and supporting links can be returned. For Plagiarism Checker, submitted text is sent so similarity/plagiarism matches and source links can be returned. For AI Detection, submitted text is sent so AI probability and sentence-level results can be returned.</p>
+
+        <h3>Saved documents and results</h3>
+        <p>Enigma may save your input text, result summaries, source matches, fact-check claims, supporting links, similarity highlights, and related result data locally on your device so you can review your history. This saved history is stored in the app's local storage and protected using device file protection where available.</p>
+
+        <h3>Account, support, and device identity</h3>
+        <p>Enigma uses a device-local app user ID/support ID to operate credits, purchases, restore flows, support lookup, and account deletion. We may process device session tokens, hashed device secrets, device integrity attestation data, device verification tokens or token hashes, request IDs, rate-limit records, and security audit records to protect the app and backend from abuse.</p>
+
+        <h3>Purchase and credit information</h3>
+        <p>Enigma processes subscription and top-up information, including product identifiers, purchase status, entitlement status, credit grants, credit deductions, credit balances, credit history, refund events, restore events, and related request IDs. The app marketplace payment platform handles payment processing. We do not receive your full payment card number. A purchase management provider helps us validate purchase status and send purchase events to our backend so credits can be granted.</p>
+
+        <h3>Limited technical and usage metadata</h3>
+        <p>We may process app version, request timing, response status, endpoint/feature used, word counts, credits charged, country/region code when available from device locale or request headers, backend logs, and error information for reliability, fraud prevention, debugging, support, and security.</p>
+
+        <h3>Support communications</h3>
+        <p>If you contact us, we process your email address, message contents, support ID if you provide it, and any other information you choose to include.</p>
 
         <h2>3. How We Use Information</h2>
         <ul>
-            <li>To process and return Humanize, AI Detection, and Plagiarism results.</li>
-            <li>To operate, secure, and improve app reliability.</li>
+            <li>Provide AI Detection, Plagiarism Checker, Fact Checker, and Text Compare results.</li>
+            <li>Deduct credits and show your credit balance/history.</li>
+            <li>Grant subscription credits and top-up credits.</li>
+            <li>Validate subscriptions, restores, refunds, and top-ups.</li>
+            <li>Save and display local document history.</li>
+            <li>Operate account deletion and local reset flows.</li>
+            <li>Secure the app using device integrity checks, device sessions, rate limits, and security logs.</li>
+            <li>Detect abuse, fraud, duplicate requests, and unauthorized backend access.</li>
             <li>To respond to support requests.</li>
-            <li>To comply with legal obligations and enforce our terms.</li>
+            <li>Maintain, debug, and improve app reliability.</li>
+            <li>Comply with legal obligations and enforce our terms.</li>
         </ul>
 
-        <h2>4. Third-Party API Vendors</h2>
-        <p>To deliver core features, submitted text is sent securely via API to third-party vendors that provide Humanize, AI Detection, and Plagiarism services.</p>
-        <div class="notice">
-            <p><strong>API data handling</strong></p>
-            <ul>
-                <li><strong>What is sent:</strong> the text you submit and minimal request metadata needed to process the request.</li>
-                <li><strong>When it is sent:</strong> only when you explicitly trigger a feature action.</li>
-                <li><strong>Why it is sent:</strong> only to generate and return the requested output.</li>
-                <li><strong>How it is protected:</strong> transmitted over encrypted connections (TLS).</li>
-            </ul>
-            <p>These vendors process data under their own privacy terms. We recommend reviewing each vendor's privacy policy where applicable.</p>
-        </div>
+        <h2>4. Third-Party Service Providers</h2>
+        <h3>Text analysis provider</h3>
+        <p>We use a third-party text analysis provider to provide AI Detection, Plagiarism Checker, Fact Checker, and Text Compare. Submitted text is sent to the provider only when you run one of those features. The provider's handling of submitted text is governed by its own privacy policy and service terms.</p>
 
-        <h2>5. Data Sharing</h2>
-        <p>We do not sell personal information. We share information only with vendors needed to run app features, or when disclosure is required by law, legal process, or to protect rights, safety, and security.</p>
+        <h3>Backend infrastructure provider</h3>
+        <p>We use backend infrastructure services for backend functions, database records, credit balances, credit ledger records, device sessions, device integrity/session records, rate limits, restore/account deletion flows, and backend security.</p>
 
-        <h2>6. Data Retention</h2>
-        <p>We retain data only as long as needed to fulfill the purposes described in this policy, including service operations, security, support, and legal compliance. Retention by third-party API vendors is governed by their own policies.</p>
+        <h3>Purchase and subscription provider</h3>
+        <p>We use a purchase and subscription service to manage subscriptions, top-up offerings, purchase status, entitlements, customer information, and purchase webhooks. This provider may process app user IDs, device/app technical data, receipt or transaction information, product identifiers, and subscription status.</p>
 
-        <h2>7. Security</h2>
-        <p>We use reasonable technical and organizational safeguards to protect data, including encryption in transit. No method of transmission or storage is 100% secure, so absolute security cannot be guaranteed.</p>
+        <h3>Platform and payment provider</h3>
+        <p>The app marketplace payment platform processes purchases, subscription management, refunds, and certain device integrity services. Its standard services and privacy terms apply to its processing.</p>
 
-        <h2>8. No Remarketing, Affiliate Links, or Cookies</h2>
+        <h2>5. Submitted Text</h2>
+        <p>You should not submit text unless you have the right to submit it. Submitted text may contain personal information about you or other people. By using Enigma to analyze text, you are responsible for making sure you have any rights, permissions, or lawful basis needed to submit that text.</p>
+        <p>SoftSky does not sell your submitted text. SoftSky does not use your submitted text to train its own AI models. Our backend processes submitted text to route it to the analysis provider and return the result. We do not intentionally store submitted text in our backend database after forwarding it for analysis, but saved documents and results may remain on your device until you delete them or delete your account in the app.</p>
+
+        <h2>6. Data Sharing</h2>
+        <p>We do not sell personal information. We share information only as needed to operate Enigma, including with text analysis providers for analysis, backend infrastructure providers for backend services, purchase and subscription providers for purchases and subscriptions, app marketplace payment providers for payments and device integrity checks, and service providers involved in support or legal compliance.</p>
+        <p>We may also disclose information if required by law, legal process, or to protect the rights, safety, security, and integrity of users, SoftSky, the app, or others.</p>
+
+        <h2>7. Data Retention and Deletion</h2>
+        <h3>Local saved documents</h3>
+        <p>Saved documents and results remain on your device until you delete them, delete the app, or use Enigma's account deletion/reset flow.</p>
+
+        <h3>Backend account and credit data</h3>
+        <p>Credit balances, credit ledger records, purchase grant/refund records, device sessions, restore records, rate-limit records, device integrity records, and security records are retained while needed to operate credits, purchases, support, fraud prevention, and legal compliance.</p>
+
+        <h3>Account deletion</h3>
+        <p>If you use the in-app Delete Account option, Enigma requests deletion of active backend records tied to your app user ID, including credit balances, credit ledger records, bonus credit records, restore audit records, security audit records tied to your account hash, device sessions, attestation keys, starter quota/usage records, and account-scoped rate-limit records. The app also clears local saved documents and resets the local app identity.</p>
+
+        <h3>Subscription cancellation</h3>
+        <p>Deleting your Enigma account does not cancel an active app marketplace subscription. Subscriptions are managed through the marketplace account where the subscription was purchased. You can cancel subscriptions through your device or marketplace subscription settings.</p>
+
+        <h3>Third-party retention</h3>
+        <p>Third-party service providers may retain information according to their own privacy policies, legal obligations, and service terms.</p>
+
+        <h2>8. Security</h2>
+        <p>We use reasonable technical and organizational safeguards, including encrypted connections, backend authorization, device integrity protections, device sessions, rate limits, request IDs, and device file protection for local saved documents where available. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p>
+
+        <h2>9. Tracking, Ads, Cookies, and Sale of Data</h2>
         <ul>
-            <li>We do <strong>not</strong> use Google Ads remarketing.</li>
-            <li>We do <strong>not</strong> use affiliate links.</li>
-            <li>We do <strong>not</strong> use cookies in Enigma's app experience.</li>
+            <li>Enigma does <strong>not</strong> use in-app advertising cookies, ad remarketing, or affiliate links.</li>
+            <li>Enigma does <strong>not</strong> sell personal information.</li>
+            <li>Enigma's current app privacy configuration does <strong>not</strong> declare tracking domains.</li>
         </ul>
-
-        <h2>9. External Links</h2>
-        <p>Enigma may contain links to third-party websites. We are not responsible for third-party content, security, or privacy practices. Review their policies before using those services.</p>
 
         <h2>10. Children's Privacy</h2>
-        <p>Enigma is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
+        <p>Enigma is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information through Enigma, contact us and we will take appropriate steps to delete it where required.</p>
 
         <h2>11. International Processing</h2>
-        <p>Depending on vendor infrastructure, your submitted data may be processed in countries other than your own. By using Enigma, you consent to this processing where permitted by law.</p>
+        <p>The service providers used to operate Enigma may process information in countries other than your own, including locations where their infrastructure or service providers operate. Data protection rules may differ from those in your jurisdiction.</p>
 
-        <h2>12. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Updated versions will be posted here with a revised "Last updated" date. Continued use of Enigma after changes means you accept the updated policy.</p>
+        <h2>12. Your Choices and Rights</h2>
+        <p>Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, or portability of your personal information. You can delete local saved documents in the app and use the in-app Delete Account option to request deletion of active backend account data. You can also contact us at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>.</p>
 
-        <h2>13. Contact Us</h2>
-        <p>If you have any questions or requests regarding this Privacy Policy, contact us at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>.</p>
+        <h2>13. External Links</h2>
+        <p>Enigma may include links to third-party websites, such as plagiarism source links, fact-check source links, subscription management pages, and third-party privacy policies. We are not responsible for the content, security, or privacy practices of third-party websites.</p>
+
+        <h2>14. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Updated versions will be posted with a revised "Last updated" date. Continued use of Enigma after an update means you accept the updated policy where permitted by law.</p>
+
+        <h2>15. Contact Us</h2>
+        <p>SoftSky Technologies / Enigma<br>
+        Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a><br>
+        Privacy and support requests: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></p>
 
         <div class="footer">
             SoftSky Technologies / Enigma<br>
