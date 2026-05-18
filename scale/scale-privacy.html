@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy for Scale</title>
+    <title>Privacy Policy for ScaleSnap</title>
     <style>
         * {
             margin: 0;
@@ -11,82 +11,171 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #090a0f;
+            --panel: rgba(20, 22, 35, 0.92);
+            --panel-strong: #121525;
+            --row: rgba(255, 255, 255, 0.07);
+            --text: #f7f9ff;
+            --muted: #aeb8ca;
+            --subtle: #77839a;
+            --line: rgba(255, 255, 255, 0.11);
+            --blue: #058cff;
+            --blue-deep: #0a45db;
+            --cyan: #00e0ff;
+            --warning: #ffd36e;
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 18% -8%, rgba(5, 140, 255, 0.24), transparent 30%),
+                radial-gradient(circle at 85% 3%, rgba(0, 224, 255, 0.14), transparent 26%),
+                linear-gradient(180deg, #080a12 0%, #0c0f18 40%, #05060a 100%);
+            min-height: 100vh;
             padding: 24px;
         }
 
         .container {
-            max-width: 840px;
+            max-width: 900px;
             margin: 0 auto;
-            background: #fff;
-            padding: 48px 40px;
-            border-radius: 16px;
-            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 36px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #e6e9ef;
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(145deg, rgba(22, 27, 47, 0.96) 0%, rgba(7, 9, 17, 0.98) 66%),
+                var(--panel-strong);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            padding: 34px 28px;
+            margin-bottom: 18px;
         }
 
-        .subtitle {
-            font-size: 15px;
-            letter-spacing: 0.08em;
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(5, 140, 255, 0.22), transparent 34%),
+                radial-gradient(circle at 78% 22%, rgba(0, 224, 255, 0.18), transparent 28%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .app-mark {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            background: linear-gradient(145deg, rgba(0, 224, 255, 0.88), rgba(5, 140, 255, 0.95) 48%, rgba(10, 69, 219, 0.96));
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-size: 1.65rem;
+            box-shadow: 0 18px 38px rgba(5, 140, 255, 0.34);
+        }
+
+        .brand-name {
+            font-size: 1.08rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-tagline {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            font-size: 0.82rem;
+            font-weight: 850;
+            letter-spacing: 0.13em;
             text-transform: uppercase;
-            color: #64748b;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            font-size: 34px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 12px;
+            color: #ffffff;
+            font-size: clamp(2.1rem, 5vw, 3.7rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
         }
 
         .last-updated {
-            font-size: 15px;
-            color: #475569;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        main {
+            background: var(--panel);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 26px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+            padding: 34px 32px;
+            backdrop-filter: blur(14px);
+        }
+
+        .notice {
+            background: linear-gradient(145deg, rgba(5, 140, 255, 0.14), rgba(255, 255, 255, 0.045));
+            border: 1px solid rgba(0, 224, 255, 0.18);
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 8px 0 28px;
+            color: #d8e3f5;
         }
 
         h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #0f172a;
-            margin: 36px 0 18px;
-        }
-
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1e293b;
-            margin: 28px 0 16px;
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            font-weight: 850;
+            letter-spacing: -0.01em;
+            margin: 34px 0 14px;
+            padding-top: 4px;
         }
 
         p {
-            margin-bottom: 18px;
-            color: #334155;
-            font-size: 16px;
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 16px;
         }
 
         ul {
-            margin: 18px 0 24px 0;
+            margin: 14px 0 22px;
             padding-left: 22px;
         }
 
         li {
-            margin-bottom: 12px;
-            color: #334155;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #ffffff;
         }
 
         a {
-            color: #0ea5e9;
+            color: var(--cyan);
+            font-weight: 800;
             text-decoration: none;
         }
 
@@ -94,177 +183,139 @@
             text-decoration: underline;
         }
 
-        .notice {
-            background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(236,254,255,0.7));
-            border: 1px solid rgba(14,165,233,0.35);
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin: 24px 0 12px;
-            color: #0f172a;
+        .footer {
+            margin-top: 34px;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
+            color: var(--subtle);
+            font-size: 0.95rem;
         }
 
-        .footer {
-            margin-top: 48px;
-            font-size: 15px;
-            color: #475569;
-            border-top: 1px solid #e6e9ef;
-            padding-top: 24px;
+        .date-line {
+            color: var(--warning);
+            font-weight: 750;
         }
 
         @media (max-width: 768px) {
             body {
-                padding: 16px;
+                padding: 14px;
             }
 
-            .container {
-                padding: 32px 22px;
+            .hero {
+                padding: 28px 20px;
+                border-radius: 26px;
             }
 
-            h1 {
-                font-size: 28px;
+            .app-mark {
+                width: 52px;
+                height: 52px;
+                border-radius: 16px;
+            }
+
+            main {
+                padding: 26px 20px;
+                border-radius: 22px;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 1.32rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="subtitle">Privacy Policy for Scale</div>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: April 7, 2026</p>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="brand">
+                    <div class="app-mark" aria-hidden="true">⚖</div>
+                    <div>
+                        <div class="brand-name">ScaleSnap</div>
+                        <div class="brand-tagline">Measure anything with your camera</div>
+                    </div>
+                </div>
+
+                <div class="eyebrow">Privacy Policy</div>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: May 18, 2026</p>
+            </div>
         </header>
 
-        <p>SoftSky Technologies ("SoftSky", "we", "us", or "our") operates Scale, a mobile writing and text analysis app with AI Detection, Plagiarism Checker, Fact Checker, Text Compare, subscriptions, credits, and top-up purchases.</p>
-        <p>This Privacy Policy explains what information Scale processes, why it is processed, which service providers help us operate the app, how information is protected, and how you can request deletion or contact us.</p>
+        <main>
+            <div class="notice">
+                <p><strong>ScaleSnap - Measure anything with your camera.</strong></p>
+                <p>This Privacy Policy explains what information ScaleSnap may collect, how it may be used, and how it may be shared when you use our websites, mobile sites, applications, and related services.</p>
+            </div>
 
-        <div class="notice">
-            <p><strong>At a glance</strong></p>
+            <p>As used in this Privacy Policy, "ScaleSnap" refers to all websites, mobile sites, applications, and other properties or services owned or operated by ScaleSnap or SoftSky Technologies. By accessing and/or using the ScaleSnap application or any ScaleSnap product or service available on or through our application, you are accepting the practices described in this Privacy Policy.</p>
+
+            <p>ScaleSnap strongly believes in keeping your personal information confidential. The following policy describes what information we collect and how it is used and shared.</p>
+
+            <h2>Information We Collect</h2>
+            <p>When you register with us or use ScaleSnap, you generally provide your measurement preferences and device camera access for the purpose of providing our image analysis and measurement services. Camera and photo library permissions are requested only when needed for app features, such as taking a photo or selecting an image to analyze.</p>
+
+            <p>In addition, ScaleSnap may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device's unique device identifiers where available and permitted, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use ScaleSnap.</p>
+
+            <p>In general, this means that we may collect the following types of information:</p>
             <ul>
-                <li>Text you submit is processed only when you choose to run a feature.</li>
-                <li>Scale sends submitted text through our backend for AI Detection, Plagiarism Checker, Fact Checker, and Text Compare results.</li>
-                <li>We use backend services for device sessions, credit balances, credit history, rate limiting, security checks, and account deletion.</li>
-                <li>We use purchase and subscription services to manage subscriptions, top-ups, entitlements, purchase status, and purchase webhooks. The app marketplace payment platform processes payments.</li>
-                <li>Saved documents and results are stored locally on your device unless you run a feature that sends the text for analysis.</li>
-                <li>We use device integrity and anti-abuse services to help verify legitimate app/device requests and reduce abuse.</li>
-                <li>We do not sell personal information.</li>
-                <li>We do not use ad remarketing, affiliate links, or in-app advertising cookies.</li>
-                <li>Contact: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></li>
+                <li>Device information and identifiers.</li>
+                <li>Camera and photo library access, with your permission.</li>
+                <li>Photos you choose to capture or select for analysis.</li>
+                <li>Measurement preferences, including metric or imperial units.</li>
+                <li>Selected scanner type, such as weight, measurements, calories, plants, translation, or object counting.</li>
+                <li>Usage data, app events, diagnostics, and analytics.</li>
+                <li>Purchase, subscription, and restore-purchase status where applicable.</li>
+                <li>Support messages and contact information if you contact us.</li>
             </ul>
-        </div>
 
-        <h2>1. Scope</h2>
-        <p>This Privacy Policy applies to Scale and related support communications with SoftSky. It does not apply to third-party websites, app marketplace services, purchase management services, backend infrastructure services, text analysis services, device integrity services, or any other third-party services except where we describe how Scale uses them.</p>
+            <h2>How We Use Information</h2>
+            <p>We use information to operate and improve ScaleSnap, provide app features, process photos you choose to analyze, remember your measurement preferences, display results, maintain scan history, provide customer support, troubleshoot errors, protect against misuse, and manage purchases or subscriptions.</p>
 
-        <h2>2. Information We Process</h2>
-        <h3>Submitted text and imported text</h3>
-        <p>When you type, paste, or import text into Scale, the app processes that text to provide the feature you request. If you import a file, Scale may extract text from that file for use in the app. When you run AI Detection, Plagiarism Checker, Fact Checker, or Text Compare, the submitted text is sent to our backend and then to a third-party text analysis provider to generate the requested result.</p>
-        <p>For Text Compare, both texts are sent for comparison. For Fact Checker, submitted text is sent so claims can be analyzed and supporting links can be returned. For Plagiarism Checker, submitted text is sent so similarity/plagiarism matches and source links can be returned. For AI Detection, submitted text is sent so AI probability and sentence-level results can be returned.</p>
+            <p>We may work with analytics companies to help us understand how ScaleSnap is being used, such as the frequency and duration of usage. We may also work with advertisers or third-party advertising networks, who may need to know how you interact with advertising provided in ScaleSnap. This helps us make the ScaleSnap experience better.</p>
 
-        <h3>Saved documents and results</h3>
-        <p>Scale may save your input text, result summaries, source matches, fact-check claims, supporting links, similarity highlights, and related result data locally on your device so you can review your history. This saved history is stored in the app's local storage and protected using device file protection where available.</p>
+            <p>We may also share depersonalized or aggregated versions of information from your application instances in order to enable product analysis, performance analysis, fraud prevention, advertising-related use, or service improvement.</p>
 
-        <h3>Account, support, and device identity</h3>
-        <p>Scale uses a device-local app user ID/support ID to operate credits, purchases, restore flows, support lookup, and account deletion. We may process device session tokens, hashed device secrets, device integrity attestation data, device verification tokens or token hashes, request IDs, rate-limit records, and security audit records to protect the app and backend from abuse.</p>
+            <h2>Information Sharing</h2>
+            <p>You agree that in order to provide services to you which you have requested, including relevant content, measurement results, app functionality, purchases, support, analytics, and advertising, we may exchange information that we collect from you with third parties who help us perform these tasks and provide these products and services.</p>
 
-        <h3>Purchase and credit information</h3>
-        <p>Scale processes subscription and top-up information, including product identifiers, purchase status, entitlement status, credit grants, credit deductions, credit balances, credit history, refund events, restore events, and related request IDs. The app marketplace payment platform handles payment processing. We do not receive your full payment card number. A purchase management provider helps us validate purchase status and send purchase events to our backend so credits can be granted.</p>
+            <p>This information may include device information, app identifiers, advertising identifiers where available and permitted by platform settings, vendor identifiers, device system information, application software information, peripheral information, country or region settings on the device, camera and photo library access status, measurement preferences, usage data, and analytics information.</p>
 
-        <h3>Limited technical and usage metadata</h3>
-        <p>We may process app version, request timing, response status, endpoint/feature used, word counts, credits charged, country/region code when available from device locale or request headers, backend logs, and error information for reliability, fraud prevention, debugging, support, and security.</p>
+            <p>We do not require you to provide more information than is reasonably necessary to use ScaleSnap. However, some features may not function if camera, photo library, network, or purchase-related permissions are unavailable.</p>
 
-        <h3>Support communications</h3>
-        <p>If you contact us, we process your email address, message contents, support ID if you provide it, and any other information you choose to include.</p>
+            <h2>Photos And Camera Access</h2>
+            <p>ScaleSnap uses your camera and photo library only with your permission. You may use the camera to capture a photo or choose an existing image from your library. These images are used to provide the analysis or measurement feature you request, such as estimating weight, dimensions, calories, plant identity, translation, or object count.</p>
 
-        <h2>3. How We Use Information</h2>
-        <ul>
-            <li>Provide AI Detection, Plagiarism Checker, Fact Checker, and Text Compare results.</li>
-            <li>Deduct credits and show your credit balance/history.</li>
-            <li>Grant subscription credits and top-up credits.</li>
-            <li>Validate subscriptions, restores, refunds, and top-ups.</li>
-            <li>Save and display local document history.</li>
-            <li>Operate account deletion and local reset flows.</li>
-            <li>Secure the app using device integrity checks, device sessions, rate limits, and security logs.</li>
-            <li>Detect abuse, fraud, duplicate requests, and unauthorized backend access.</li>
-            <li>To respond to support requests.</li>
-            <li>Maintain, debug, and improve app reliability.</li>
-            <li>Comply with legal obligations and enforce our terms.</li>
-        </ul>
+            <p>You can manage camera and photo permissions in your device settings. If permissions are disabled, camera capture or gallery selection may not be available.</p>
 
-        <h2>4. Third-Party Service Providers</h2>
-        <h3>Text analysis provider</h3>
-        <p>We use a third-party text analysis provider to provide AI Detection, Plagiarism Checker, Fact Checker, and Text Compare. Submitted text is sent to the provider only when you run one of those features. The provider's handling of submitted text is governed by its own privacy policy and service terms.</p>
+            <h2>Measurement Results And Scan History</h2>
+            <p>ScaleSnap may store scan results and related images on your device so you can review previous results in scan history. You can remove app data by deleting the app or using available in-app controls where provided.</p>
 
-        <h3>Backend infrastructure provider</h3>
-        <p>We use backend infrastructure services for backend functions, database records, credit balances, credit ledger records, device sessions, device integrity/session records, rate limits, restore/account deletion flows, and backend security.</p>
+            <p>ScaleSnap results are estimates generated from photos and should not be treated as certified measurements, medical nutrition advice, legal advice, safety-critical information, or professional advice.</p>
 
-        <h3>Purchase and subscription provider</h3>
-        <p>We use a purchase and subscription service to manage subscriptions, top-up offerings, purchase status, entitlements, customer information, and purchase webhooks. This provider may process app user IDs, device/app technical data, receipt or transaction information, product identifiers, and subscription status.</p>
+            <h2>Children's Privacy</h2>
+            <p>We do not use ScaleSnap to knowingly solicit data from or market to children under the age of 13. If a parent or guardian becomes aware that his or her child has provided us with information without their consent, he or she should contact us at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>. We will delete such information from our files within a reasonable time.</p>
 
-        <h3>Platform and payment provider</h3>
-        <p>The app marketplace payment platform processes purchases, subscription management, refunds, and certain device integrity services. Its standard services and privacy terms apply to its processing.</p>
+            <h2>Security</h2>
+            <p>We are concerned about safeguarding the confidentiality of your information. We provide physical, electronic, and procedural safeguards to protect information we process and maintain. For example, we limit access to this information to authorized employees and contractors who need to know that information in order to operate, develop, or improve our application.</p>
 
-        <h2>5. Submitted Text</h2>
-        <p>You should not submit text unless you have the right to submit it. Submitted text may contain personal information about you or other people. By using Scale to analyze text, you are responsible for making sure you have any rights, permissions, or lawful basis needed to submit that text.</p>
-        <p>SoftSky does not sell your submitted text. SoftSky does not use your submitted text to train its own AI models. Our backend processes submitted text to route it to the analysis provider and return the result. We do not intentionally store submitted text in our backend database after forwarding it for analysis, but saved documents and results may remain on your device until you delete them or delete your account in the app.</p>
+            <p>Please be aware that, although we endeavor to provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches. You understand and acknowledge that the submission of any such information by you via the Internet or posting it on non-public, restricted, or private pages is at your own risk.</p>
 
-        <h2>6. Data Sharing</h2>
-        <p>We do not sell personal information. We share information only as needed to operate Scale, including with text analysis providers for analysis, backend infrastructure providers for backend services, purchase and subscription providers for purchases and subscriptions, app marketplace payment providers for payments and device integrity checks, and service providers involved in support or legal compliance.</p>
-        <p>We may also disclose information if required by law, legal process, or to protect the rights, safety, security, and integrity of users, SoftSky, the app, or others.</p>
+            <h2>Updates To This Policy</h2>
+            <p>This Privacy Policy may be updated from time to time for any reason. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes. Any changes made to our privacy policy will be published on this page, containing the "last updated" date.</p>
 
-        <h2>7. Data Retention and Deletion</h2>
-        <h3>Local saved documents</h3>
-        <p>Saved documents and results remain on your device until you delete them, delete the app, or use Scale's account deletion/reset flow.</p>
+            <h2>Your Consent</h2>
+            <p>By using ScaleSnap, you are consenting to our processing of your information as set forth in this Privacy Policy now and as amended by us. "Processing" means using or touching information in any way, including, but not limited to, collecting, storing, deleting, using, combining, and disclosing information.</p>
 
-        <h3>Backend account and credit data</h3>
-        <p>Credit balances, credit ledger records, purchase grant/refund records, device sessions, restore records, rate-limit records, device integrity records, and security records are retained while needed to operate credits, purchases, support, fraud prevention, and legal compliance.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions regarding privacy while using ScaleSnap, or have questions about our practices, please contact us via email at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>.</p>
 
-        <h3>Account deletion</h3>
-        <p>If you use the in-app Delete Account option, Scale requests deletion of active backend records tied to your app user ID, including credit balances, credit ledger records, bonus credit records, restore audit records, security audit records tied to your account hash, device sessions, attestation keys, starter quota/usage records, and account-scoped rate-limit records. The app also clears local saved documents and resets the local app identity.</p>
-
-        <h3>Subscription cancellation</h3>
-        <p>Deleting your Scale account does not cancel an active app marketplace subscription. Subscriptions are managed through the marketplace account where the subscription was purchased. You can cancel subscriptions through your device or marketplace subscription settings.</p>
-
-        <h3>Third-party retention</h3>
-        <p>Third-party service providers may retain information according to their own privacy policies, legal obligations, and service terms.</p>
-
-        <h2>8. Security</h2>
-        <p>We use reasonable technical and organizational safeguards, including encrypted connections, backend authorization, device integrity protections, device sessions, rate limits, request IDs, and device file protection for local saved documents where available. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p>
-
-        <h2>9. Tracking, Ads, Cookies, and Sale of Data</h2>
-        <ul>
-            <li>Scale does <strong>not</strong> use in-app advertising cookies, ad remarketing, or affiliate links.</li>
-            <li>Scale does <strong>not</strong> sell personal information.</li>
-            <li>Scale's current app privacy configuration does <strong>not</strong> declare tracking domains.</li>
-        </ul>
-
-        <h2>10. Children's Privacy</h2>
-        <p>Scale is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information through Scale, contact us and we will take appropriate steps to delete it where required.</p>
-
-        <h2>11. International Processing</h2>
-        <p>The service providers used to operate Scale may process information in countries other than your own, including locations where their infrastructure or service providers operate. Data protection rules may differ from those in your jurisdiction.</p>
-
-        <h2>12. Your Choices and Rights</h2>
-        <p>Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, or portability of your personal information. You can delete local saved documents in the app and use the in-app Delete Account option to request deletion of active backend account data. You can also contact us at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>.</p>
-
-        <h2>13. External Links</h2>
-        <p>Scale may include links to third-party websites, such as plagiarism source links, fact-check source links, subscription management pages, and third-party privacy policies. We are not responsible for the content, security, or privacy practices of third-party websites.</p>
-
-        <h2>14. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Updated versions will be posted with a revised "Last updated" date. Continued use of Scale after an update means you accept the updated policy where permitted by law.</p>
-
-        <h2>15. Contact Us</h2>
-        <p>SoftSky Technologies / Scale<br>
-        Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a><br>
-        Privacy and support requests: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></p>
-
-        <div class="footer">
-            SoftSky Technologies / Scale<br>
-            Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>
-        </div>
+            <div class="footer">
+                <p><strong>ScaleSnap - Measure anything with your camera</strong></p>
+                <p class="date-line">Dated: May 18, 2026</p>
+                <p>SoftSky Technologies<br>
+                Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></p>
+            </div>
+        </main>
     </div>
 </body>
 </html>
