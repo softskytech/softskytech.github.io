@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service for Scale</title>
+    <title>Terms of Service for ScaleSnap</title>
     <style>
         * {
             margin: 0;
@@ -11,79 +11,176 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #090a0f;
+            --panel: rgba(20, 22, 35, 0.92);
+            --panel-strong: #121525;
+            --text: #f7f9ff;
+            --muted: #aeb8ca;
+            --subtle: #77839a;
+            --line: rgba(255, 255, 255, 0.11);
+            --blue: #058cff;
+            --blue-deep: #0a45db;
+            --cyan: #00e0ff;
+            --warning: #ffd36e;
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1f2933;
-            background-color: #f5f7fb;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 18% -8%, rgba(5, 140, 255, 0.24), transparent 30%),
+                radial-gradient(circle at 85% 3%, rgba(0, 224, 255, 0.14), transparent 26%),
+                linear-gradient(180deg, #080a12 0%, #0c0f18 40%, #05060a 100%);
+            min-height: 100vh;
             padding: 24px;
         }
 
         .container {
-            max-width: 840px;
+            max-width: 900px;
             margin: 0 auto;
-            background: #fff;
-            padding: 48px 40px;
-            border-radius: 16px;
-            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 36px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #e2e8f0;
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(145deg, rgba(22, 27, 47, 0.96) 0%, rgba(7, 9, 17, 0.98) 66%),
+                var(--panel-strong);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            padding: 34px 28px;
+            margin-bottom: 18px;
         }
 
-        .subtitle {
-            font-size: 15px;
-            letter-spacing: 0.08em;
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(5, 140, 255, 0.22), transparent 34%),
+                radial-gradient(circle at 78% 22%, rgba(0, 224, 255, 0.18), transparent 28%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .app-mark {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            background: linear-gradient(145deg, rgba(0, 224, 255, 0.88), rgba(5, 140, 255, 0.95) 48%, rgba(10, 69, 219, 0.96));
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-size: 1.65rem;
+            box-shadow: 0 18px 38px rgba(5, 140, 255, 0.34);
+        }
+
+        .brand-name {
+            font-size: 1.08rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-tagline {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            font-size: 0.82rem;
+            font-weight: 850;
+            letter-spacing: 0.13em;
             text-transform: uppercase;
-            color: #64748b;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            font-size: 34px;
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 12px;
+            color: #ffffff;
+            font-size: clamp(2.1rem, 5vw, 3.7rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+            margin-bottom: 14px;
         }
 
         .last-updated {
-            font-size: 15px;
-            color: #475569;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        main {
+            background: var(--panel);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 26px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+            padding: 34px 32px;
+            backdrop-filter: blur(14px);
+        }
+
+        .notice {
+            background: linear-gradient(145deg, rgba(5, 140, 255, 0.14), rgba(255, 255, 255, 0.045));
+            border: 1px solid rgba(0, 224, 255, 0.18);
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 8px 0 28px;
+            color: #d8e3f5;
         }
 
         h2 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #0f172a;
-            margin: 36px 0 18px;
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            font-weight: 850;
+            letter-spacing: -0.01em;
+            margin: 34px 0 14px;
+            padding-top: 4px;
+        }
+
+        h3 {
+            color: #ffffff;
+            font-size: 1.08rem;
+            margin: 20px 0 10px;
         }
 
         p {
-            margin-bottom: 18px;
-            color: #334155;
-            font-size: 16px;
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 16px;
         }
 
         ul {
-            margin: 18px 0 24px 0;
+            margin: 14px 0 22px;
             padding-left: 22px;
         }
 
         li {
-            margin-bottom: 12px;
-            color: #334155;
+            color: var(--muted);
+            margin-bottom: 10px;
         }
 
         strong {
-            color: #0f172a;
+            color: #ffffff;
         }
 
         a {
-            color: #0ea5e9;
+            color: var(--cyan);
+            font-weight: 800;
             text-decoration: none;
         }
 
@@ -91,117 +188,160 @@
             text-decoration: underline;
         }
 
-        .note {
-            background: linear-gradient(135deg, rgba(251,191,36,0.18), rgba(254,243,199,0.7));
-            border: 1px solid rgba(251,191,36,0.45);
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin: 24px 0 12px;
-            color: #7c5800;
+        .footer {
+            margin-top: 34px;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
+            color: var(--subtle);
+            font-size: 0.95rem;
         }
 
-        .footer {
-            margin-top: 48px;
-            font-size: 15px;
-            color: #475569;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 24px;
+        .back-link {
+            display: inline-flex;
+            margin-top: 8px;
+            color: var(--cyan);
+            font-weight: 800;
         }
 
         @media (max-width: 768px) {
             body {
-                padding: 16px;
+                padding: 14px;
             }
 
-            .container {
-                padding: 32px 22px;
+            .hero {
+                padding: 28px 20px;
+                border-radius: 26px;
             }
 
-            h1 {
-                font-size: 28px;
+            .app-mark {
+                width: 52px;
+                height: 52px;
+                border-radius: 16px;
+            }
+
+            main {
+                padding: 26px 20px;
+                border-radius: 22px;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 1.32rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="subtitle">Terms of Service for Scale</div>
-            <h1>Terms of Service</h1>
-            <p class="last-updated">Effective date: April 20, 2026</p>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="brand">
+                    <div class="app-mark" aria-hidden="true">⚖</div>
+                    <div>
+                        <div class="brand-name">ScaleSnap</div>
+                        <div class="brand-tagline">Measure anything with your camera</div>
+                    </div>
+                </div>
+
+                <div class="eyebrow">Terms of Service</div>
+                <h1>Terms of Service</h1>
+                <p class="last-updated">Last Updated: May 20, 2025</p>
+            </div>
         </header>
 
-        <p>These Terms of Service ("Terms") govern your access to and use of the Scale mobile application (the "App") provided by SoftSky Technologies ("SoftSky", "we", "us", or "our"). By installing or using Scale you agree to be bound by these Terms.</p>
+        <main>
+            <div class="notice">
+                <p><strong>ScaleSnap - Measure anything with your camera.</strong></p>
+                <p>These Terms govern your access to and use of the ScaleSnap mobile application and related services.</p>
+            </div>
 
-        <h2>1. Eligibility</h2>
-        <p>You must be at least 13 years of age (or the minimum age required in your jurisdiction) to use the App. By using Scale you represent that you meet this requirement.</p>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the ScaleSnap application ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
 
-        <h2>2. App Functionality</h2>
-        <p>Scale provides text analysis tools including AI detection, plagiarism checking, fact checking, and text comparison. Features are accessed through a credit-based system. You may input text directly, paste from your clipboard, or import supported document formats for analysis.</p>
+            <h2>2. Description of Service</h2>
+            <p>ScaleSnap is a mobile application that uses computer vision and artificial intelligence to provide weight, measurement, and other analysis features for objects captured via camera or selected from the device gallery.</p>
 
-        <h2>3. Credits, Subscriptions & Purchases</h2>
-        <p>Scale operates on a credit-based system. Credits are consumed when you use the App's analysis features.</p>
-        <ul>
-            <li><strong>Free Tier:</strong> Limited credits and feature access as described within the App.</li>
-            <li><strong>Subscriptions:</strong> Paid subscription plans provide additional credits and may unlock additional features. Subscriptions auto-renew via your Apple ID until cancelled at least 24 hours before the renewal date. Manage or cancel subscriptions in <strong>Settings &gt; Apple ID &gt; Subscriptions</strong>.</li>
-            <li><strong>Top-Up Purchases:</strong> One-time credit packs may be purchased for additional credits. Top-up credits do not expire.</li>
-            <li><strong>Subscription Credits:</strong> Credits granted through a subscription may expire at the end of the subscription period as described within the App.</li>
-        </ul>
-        <p>Pricing may vary by region due to currency or taxation differences.</p>
+            <h2>3. Registration and User Accounts</h2>
+            <h3>3.1.</h3>
+            <p>Some features of the App may require you to register for an account. You agree to provide accurate, current, and complete information during the registration process.</p>
 
-        <h2>4. Payments & Refunds</h2>
-        <p>All purchases are processed by Apple through the App Store. We do not receive your payment card details. Refund requests must be submitted through Apple Support. When necessary we may share usage details with Apple to help resolve a refund inquiry.</p>
+            <h3>3.2.</h3>
+            <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
 
-        <h2>5. Content You Submit</h2>
-        <p>You retain ownership of any text or documents you submit to the App. By using the App you grant us a limited, non-exclusive license to process your content solely for the purpose of delivering the requested analysis. We do not claim ownership of your content and do not use it for any purpose other than providing the service.</p>
+            <h3>3.3.</h3>
+            <p>You must immediately notify ScaleSnap of any unauthorized use of your account or any other breach of security.</p>
 
-        <h2>6. Acceptable Use</h2>
-        <ul>
-            <li>Use Scale only for lawful purposes and in compliance with all applicable laws and regulations.</li>
-            <li>Do not attempt to reverse engineer, decompile, modify, or circumvent any security features of the App.</li>
-            <li>Do not use the App in any manner that could damage, disable, or impair the service or interfere with other users.</li>
-            <li>Do not use automated systems, bots, or scripts to access or interact with the App beyond its intended interface.</li>
-            <li>Do not attempt to gain unauthorized access to any part of the App or its related systems.</li>
-        </ul>
+            <h2>4. User Content</h2>
+            <h3>4.1.</h3>
+            <p>The App may allow you to capture, upload, and store images ("User Content").</p>
 
-        <h2>7. Third-Party Services</h2>
-        <p>Scale relies on third-party service providers to operate certain features, process payments, and maintain infrastructure. Your use of Scale signifies acceptance of the terms and privacy practices of those providers. We are not responsible for the availability or practices of third-party services.</p>
+            <h3>4.2.</h3>
+            <p>You retain all rights to your User Content, but grant ScaleSnap a non-exclusive, transferable, sub-licensable, royalty-free, worldwide license to use, copy, modify, create derivative works based on, distribute, publicly display, and otherwise exploit such User Content for the purpose of operating and improving the App.</p>
 
-        <h2>8. Service Availability & Limitations</h2>
-        <p>Scale depends on network connectivity and third-party infrastructure. Analysis results, credit processing, or other features may experience delays or temporary unavailability. We may suspend, modify, or discontinue any feature at any time to maintain the service, improve the App, or comply with applicable laws. We are not liable for any interruption or modification of the service.</p>
+            <h3>4.3.</h3>
+            <p>You represent and warrant that your User Content does not violate the rights of any third party, including copyright, trademark, privacy, publicity, or other personal or proprietary rights.</p>
 
-        <h2>9. Accuracy of Results</h2>
-        <p>Analysis results provided by the App are for informational purposes only and should not be treated as definitive or authoritative determinations. Results may vary and are not guaranteed to be accurate, complete, or error-free. You are responsible for independently verifying any results before relying on them for academic, professional, or legal purposes.</p>
+            <h2>5. Privacy</h2>
+            <p>Your privacy is important to us. Our Privacy Policy, which is incorporated into these Terms by reference, explains how we collect, use, and disclose information about you.</p>
 
-        <h2>10. Intellectual Property</h2>
-        <p>All trademarks, graphics, designs, and source code associated with Scale are the property of SoftSky Technologies. You may not copy, distribute, or create derivative works without our prior written permission.</p>
+            <h2>6. Prohibited Activities</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the App for any illegal purpose or in violation of any laws.</li>
+                <li>Attempt to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the App.</li>
+                <li>Upload invalid data, viruses, worms, or other software agents through the App.</li>
+                <li>Use any robot, spider, crawler, scraper, or other automated means to access the App.</li>
+                <li>Impersonate another person or access another user's account without permission.</li>
+            </ul>
 
-        <h2>11. Disclaimer of Warranties</h2>
-        <p>Scale is provided "as is" and "as available." SoftSky disclaims all warranties of any kind, whether express or implied, including warranties of merchantability, fitness for a particular purpose, accuracy of results, and non-infringement.</p>
+            <h2>7. Intellectual Property Rights</h2>
+            <h3>7.1.</h3>
+            <p>The App and its original content (excluding User Content), features, and functionality are and will remain the exclusive property of ScaleSnap and its licensors.</p>
 
-        <h2>12. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, SoftSky will not be liable for any indirect, incidental, special, consequential, or exemplary damages arising from your use of Scale, including but not limited to loss of data, loss of credits, or reliance on analysis results. By using the App you agree to hold SoftSky, its employees, affiliates, and partners harmless from any claims arising from your use or misuse of the App.</p>
+            <h3>7.2.</h3>
+            <p>Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of ScaleSnap.</p>
 
-        <h2>13. Termination</h2>
-        <p>We may suspend or terminate your access to Scale at any time if we reasonably believe you have violated these Terms, engaged in abusive behavior, or engaged in unlawful activity. You may stop using Scale at any time by deleting the App. Termination does not entitle you to a refund of any purchased credits or active subscription fees.</p>
+            <h2>8. Disclaimer of Warranties</h2>
+            <h3>8.1.</h3>
+            <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
 
-        <h2>14. Changes to These Terms</h2>
-        <p>We may update these Terms to reflect changes in our service or legal obligations. We will notify you within the App or on our website before the new Terms take effect. Continued use of Scale after updates means you accept the revised Terms.</p>
+            <h3>8.2.</h3>
+            <p>WHILE WE STRIVE FOR ACCURACY, WE MAKE NO GUARANTEE THAT THE MEASUREMENT AND ANALYSIS FEATURES OF THE APP WILL BE 100% ACCURATE. THE APP IS NOT INTENDED FOR USE IN SITUATIONS WHERE PRECISE MEASUREMENTS ARE CRITICAL.</p>
 
-        <h2>15. Governing Law</h2>
-        <p>These Terms are governed by the laws of the jurisdiction in which SoftSky Technologies is established, without regard to its conflict of law provisions.</p>
+            <h2>9. Limitation of Liability</h2>
+            <p>IN NO EVENT SHALL ScaleSnap, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE APP.</p>
 
-        <h2>16. Contact</h2>
-        <p>If you have questions about these Terms or need assistance, contact us at <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>.</p>
+            <h2>10. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless ScaleSnap and its officers, directors, employees, and agents, from and against any claims, liabilities, damages, losses, and expenses, including, without limitation, reasonable legal and accounting fees, arising out of or in any way connected with your access to or use of the App or your violation of these Terms.</p>
 
-        <div class="footer">
-            SoftSky Technologies<br>
-            Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a>
-        </div>
+            <h2>11. Modifications to the Service and Terms</h2>
+            <h3>11.1.</h3>
+            <p>ScaleSnap reserves the right to modify or discontinue, temporarily or permanently, the App or any features or portions thereof without prior notice.</p>
+
+            <h3>11.2.</h3>
+            <p>We may revise these Terms from time to time. The most current version will always be on the App. By continuing to access or use the App after revisions become effective, you agree to be bound by the revised Terms.</p>
+
+            <h2>12. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of Turkey, without regard to its conflict of law provisions.</p>
+
+            <h2>13. Termination</h2>
+            <h3>13.1.</h3>
+            <p>We may terminate or suspend your account and bar access to the App immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including but not limited to a breach of the Terms.</p>
+
+            <h3>13.2.</h3>
+            <p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+
+            <h2>14. Contact Us</h2>
+            <p>If you have any questions about these Terms, please contact us at:</p>
+            <p>Email: <a href="mailto:softskytechnologiesx@gmail.com">softskytechnologiesx@gmail.com</a></p>
+            <p>Website: <a href="https://softskytech.github.io/scale/scale-instructions.html">https://softskytech.github.io/scale/scale-instructions.html</a></p>
+
+            <a class="back-link" href="./scale.html">← Back to Home</a>
+
+            <div class="footer">
+                <p>© 2025 ScaleSnap. All rights reserved.</p>
+                <p>SoftSky Technologies</p>
+            </div>
+        </main>
     </div>
 </body>
 </html>
